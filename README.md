@@ -1,115 +1,174 @@
-# HackerHelper
+# Hacker Helper
 
-HackerHelper is a powerful development assistant that combines multiple AI providers to help you with your coding tasks. It features a modern, responsive UI and supports multiple AI providers including OpenAI GPT-4, Anthropic Claude, Google Gemini, and Groq.
+A comprehensive security research and penetration testing toolkit built with React, TypeScript, and Python. This application combines various security tools, mind mapping capabilities, and AI assistance to streamline the workflow of security professionals and ethical hackers.
 
-## Features
+---
 
-- 🤖 Multiple AI Provider Support
-  - OpenAI GPT-4
-  - Anthropic Claude
-  - Google Gemini
-  - Groq
-- 💬 Real-time Chat Interface
-- 🌓 Dark Mode Support
-- ⚡ Fast Response Times
-- 🎨 Modern, Responsive UI
+## 🛡️ Key Features
 
-## Prerequisites
+### Security Tools Suite
+- Vulnerability scanning and assessment
+- Network reconnaissance tools
+- Cryptographic operations
+- Security data visualization
 
-Before installing HackerHelper, make sure you have the following installed:
+### Mind Mapping & Organization
+- Interactive mind map creation and editing
+- Real-time collaboration capabilities
+- Advanced node customization
+- Auto-layout functionality
+- History tracking with undo/redo
 
-- Python 3.8 or higher
-- Node.js 16 or higher
-- npm or yarn
-- pip (Python package manager)
+### Project Management
+- Task tracking and organization
+- Note-taking with tags
+- GitHub repository integration
+- Project data import/export
 
-## Installation
+### AI Integration
+- Multiple AI provider support (OpenAI, Anthropic, Google, etc.)
+- Security analysis assistance
+- Code review helper
+- Threat assessment
+
+---
+
+## 🔧 Tech Stack
+
+### Frontend
+- React 18 with TypeScript
+- Vite for build tooling
+- TailwindCSS & Emotion for styling
+- React Flow for mind mapping
+- React Query for state management
+- Framer Motion for animations
+
+### Backend
+- Flask REST API
+- Multiple security-focused Python libraries
+- Redis for caching
+- JWT authentication
+- Rate limiting and security middleware
+
+---
+
+## ⚙️ Installation
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/Zierax/HackerHelper.git
+   cd HackerHelper
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Run the installation script:
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
+   
+   **The installation script will:**
+   - Check system prerequisites
+   - Set up environment variables
+   - Install Python dependencies
+   - Install Node.js dependencies
+   - Configure API keys
+
+---
+
+## 🚀 Development
+
+1. Start the frontend and backend development servers:
+   ```bash
+   python3 api/server.py & npm run dev
+   ```
+
+---
+
+## 🔑 API Keys
+
+Configure API integrations in your `.env` file:
+
+- OpenAI API Key
+- Anthropic API Key
+- Google Gemini API Key
+- Shodan API Key
+- Censys API Keys
+- VirusTotal API Key
+- And more...
+
+---
+
+## 🏗️ Project Structure
+
+```plaintext
+src/
+├── components/ # React components
+├── core/       # Core application logic
+├── store/      # State management
+├── utils/      # Utility functions
+└── assets/     # Static assets
+api/
+├── routes/     # API endpoints
+├── services/   # Business logic
+├── utils/      # Helper functions
+└── models/     # Data models
+```
+
+---
+
+## 🧪 Testing
+
+Run frontend tests:
 ```bash
-git clone https://github.com/Zierax/HackerHelper.git
-cd HackerHelper
+npm run test
 ```
 
-2. Run the installation script:
+Run backend tests:
 ```bash
-# On Unix-like systems (Linux/macOS)
-chmod +x install.sh
-./install.sh
-
-# On Windows
-# Run the commands manually as described below
+pytest
 ```
 
-3. If on Windows or if you prefer manual installation:
+Generate coverage report:
 ```bash
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Install Node.js dependencies
-npm install
+npm run test:coverage
 ```
 
-4. Configure your environment:
-- Copy `.env.example` to `.env` (or let the install script create it)
-- Add your API keys for the AI providers you want to use:
-  ```
-  OPENAI_API_KEY=your_key_here
-  ANTHROPIC_API_KEY=your_key_here
-  GEMINI_API_KEY=your_key_here
-  GROQ_API_KEY=your_key_here
-  ```
+---
 
-## Running the Application
+## 📄 License
 
-1. Start the backend server:
-```bash
-python api/server.py
-```
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-2. In a new terminal, start the frontend development server:
-```bash
-npm run dev
-```
+---
 
-3. Open your browser and navigate to `http://localhost:5173` (or the URL shown in your terminal)
+## 🤝 Contributing
 
-## Development
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
-The project structure is organized as follows:
+---
 
-```
-HackerHelper/
-├── api/                    # Backend Python API
-│   ├── core/              # Core functionality
-│   │   └── ai_assistant.py # AI provider implementations
-│   └── server.py          # Flask server
-├── src/                   # Frontend React application
-│   ├── components/        # React components
-│   │   ├── ui/           # Reusable UI components
-│   │   └── AIAssistant.tsx # Main AI chat component
-│   ├── lib/              # Utility functions
-│   └── App.tsx           # Root component
-├── install.sh            # Installation script
-├── requirements.txt      # Python dependencies
-└── package.json         # Node.js dependencies
-```
+## 🔐 Security
 
-## Contributing
+For security concerns, please email [zs.01117875692@gmail.com](mailto:zs.01117875692@gmail.com).
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+---
 
-## License
+## 👤 Author
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Created by **Ziad** - Web2/Web3 Penetration Tester & Bug Hunter
 
-## Acknowledgments
-
-- Built with React and Vite
-- Styled with Tailwind CSS
-- Backend powered by Flask
-- AI capabilities provided by various AI providers
+- **GitHub:** [@Zierax](https://github.com/Zierax)
+- **LinkedIn:** [z14d](https://linkedin.com/in/z14d)
+- **Twitter:** [@Zierax_x](https://twitter.com/Zierax_x)
