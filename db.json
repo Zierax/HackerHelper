@@ -1,0 +1,40 @@
+{
+    "vulnerability": {
+        "xss": [],
+        "csrf": [],
+        "clickjacking": [],
+        "sql-injection": [],
+        "ssl-tls": []
+    },
+    "network": {
+        "http-enum": [],
+        "ssl-enum": [],
+        "dns-brute": [],
+        "nmap-scan": [],
+        "smb-enum": [],
+        "mysql-enum": []
+    },
+    "encryption": {
+        "generate-key-pair-ecdsa": [],
+        "sign-ecdsa": [],
+        "verify-ecdsa": [],
+        "encrypt-file": [],
+        "decrypt-file": [],
+        "generate-key-pair-ecdh": [],
+        "generate-hmac": [],
+        "verify-hmac": [],
+        "generate-totp": [],
+        "verify-totp": []
+    },
+    "recon": {
+        "whois": [],
+        "shodan": [],
+        "censys": [],
+        "google-dork": [],
+        "technology-detection": [],
+        "email-harvest": [],
+        "domain-info": [],
+        "ssl-info": [],
+        "subdomain-enum": []
+    }
+}

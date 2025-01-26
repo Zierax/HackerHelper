@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker Helper Test Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: radial-gradient(circle, #1a1a2e, #16213e);
+      font-family: 'Courier New', monospace;
+      color: #f0f0f0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: pulse 5s infinite;
+      margin: 0; 
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      padding: 2rem; /* Adjusted padding for better responsiveness */
+      max-width: 90%; /* Make container responsive */
+      text-align: center;
+      backdrop-filter: blur(15px);
+      transition: transform 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 4rem; /* Increased padding for larger screens */
+      }
+    }
+
+    h1 {
+      color: #00adb5;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+      font-size: 3rem; /* Adjusted font size for better responsiveness */
+      margin-bottom: 1rem;
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    p {
+      color: #f0f0f0;
+      font-size: 1.2rem; /* Adjusted font size for better readability */
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      color: #ffffff;
+      font-weight: bold;
+      padding: 1rem 2rem; /* Adjusted padding for better responsiveness */
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+      font-size: 1.2rem; /* Adjusted font size for better responsiveness */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(90deg, #ee0979, #ff6a00);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    #responseText {
+      color: #00adb5;
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 1.4rem; /* Adjusted font size for better readability */
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    a {
+      color: #ff6a00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #ee0979;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hacker-Helper</h1>
+    <p>
+      Welcome to the <strong>test.html</strong> page for the Flask server of the <strong>Hacker-Helper</strong> project.
+      Created by <a href="https://github.com/Zierax" target="_blank">Zierax</a>, designed to empower the future of ethical hacking.
+    </p>
+    <button onclick="alert('Works Well, You can Start Working Now !')">Get Started</button>
+    <div id="responseText"></div>
+  </div>
+</body>
+</html>

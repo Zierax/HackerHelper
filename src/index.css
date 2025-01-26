@@ -1,0 +1,190 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --neon-glow: 0 0 10px rgba(99, 102, 241, 0.5), 0 0 20px rgba(99, 102, 241, 0.3);
+  
+  /* Light theme colors */
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+  --primary: 242 83% 68%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 224 71% 4%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 8% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 224 71% 4%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 242 83% 68%;
+  --radius: 0.5rem;
+  --shadow-color: 220 13% 91%;
+}
+
+.dark {
+  /* Dark theme colors */
+  --background: 224 71% 4%;
+  --foreground: 210 20% 98%;
+  --card: 224 71% 4%;
+  --card-foreground: 210 20% 98%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 242 83% 68%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 215 27% 16%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 27% 16%;
+  --muted-foreground: 217 19% 73%;
+  --accent: 215 27% 16%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 215 27% 16%;
+  --input: 215 27% 16%;
+  --ring: 242 83% 68%;
+  --shadow-color: 215 27% 16%;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-foreground bg-background min-h-screen;
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+  }
+
+  .dark body {
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.6);
+  }
+}
+
+@layer components {
+  .neo-glass {
+    @apply bg-background/80 backdrop-blur-lg border border-border/50 rounded-lg shadow-lg;
+    box-shadow: 0 4px 6px -2px hsl(var(--shadow-color) / 0.2), 0 2px 4px -1px hsl(var(--shadow-color) / 0.1);
+  }
+
+  .card {
+    @apply neo-glass p-4 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+    disabled:opacity-50 disabled:pointer-events-none ring-offset-background
+    px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .input {
+    @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-black
+    ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium
+    placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
+    focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+    transition-colors duration-200;
+  }
+
+  .select {
+    @apply flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-black
+    ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 
+    focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+    transition-colors duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors
+    focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  .badge-primary {
+    @apply border-transparent bg-primary text-primary-foreground hover:bg-primary/80;
+  }
+
+  .badge-secondary {
+    @apply border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .glass-effect {
+    @apply bg-opacity-20 backdrop-blur-lg border border-white/10 shadow-lg;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-200 ease-in-out hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-blue-500;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02];
+  }
+}
+
+@layer utilities {
+  .animate-neon {
+    animation: neon 2s ease-in-out infinite alternate;
+  }
+
+  .text-glow {
+    text-shadow: var(--neon-glow);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+}
+
+@keyframes neon {
+  from {
+    box-shadow: var(--neon-glow);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 30px rgba(99, 102, 241, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
